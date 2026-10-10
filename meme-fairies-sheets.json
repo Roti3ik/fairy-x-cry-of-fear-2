@@ -1,0 +1,48 @@
+{
+  "_status": "DRAFT design sheets. Cells set to null must be read from the installed game before building (not yet verified).",
+  "mod": {
+    "title": "Meme Fairies",
+    "tagline": "Five silly new fairies to catch in the very first area.",
+    "host": "ZanZarah: The Hidden Portal",
+    "players": "solo",
+    "route": "data-file override via Melty file mappings ({game}); loader TBD from install inspection"
+  },
+  "fairies": [
+    {"id": "f1", "name": "Sir Fluffington", "element": "Nature", "description": "A very serious fairy who is mostly fluff.", "spells": ["s1", "s2"], "wizformId": null, "model": null, "foundAt": "area1_spawn_a"},
+    {"id": "f2", "name": "Gigachad Gnome", "element": "Earth", "description": "Never skips leg day. Never skips anything.", "spells": ["s3", "s4"], "wizformId": null, "model": null, "foundAt": "area1_spawn_b"},
+    {"id": "f3", "name": "Lord Splashington", "element": "Water", "description": "Confidently wrong about being a duck.", "spells": ["s5", "s6"], "wizformId": null, "model": null, "foundAt": "area1_spawn_c"},
+    {"id": "f4", "name": "Sparky McZoomies", "element": "Air", "description": "Has not stopped moving since birth.", "spells": ["s7", "s8"], "wizformId": null, "model": null, "foundAt": "area1_spawn_d"},
+    {"id": "f5", "name": "Toasty Bean", "element": "Fire", "description": "Warm, crunchy, and deeply misunderstood.", "spells": ["s9", "s10"], "wizformId": null, "model": null, "foundAt": "area1_spawn_e"}
+  ],
+  "spells": [
+    {"id": "s1", "name": "Fluff Barrage", "element": "Nature", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Tufts of fluff fly at the target"},
+    {"id": "s2", "name": "Dramatic Sigh", "element": "Nature", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Slows the opponent's next cast"},
+    {"id": "s3", "name": "Protein Shake", "element": "Earth", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Self-buff"},
+    {"id": "s4", "name": "Rock Flex", "element": "Earth", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Boulder burst"},
+    {"id": "s5", "name": "Quack Attack", "element": "Water", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Water jet"},
+    {"id": "s6", "name": "Belly Flop", "element": "Water", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Area splash"},
+    {"id": "s7", "name": "Zoomies", "element": "Air", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Speed boost"},
+    {"id": "s8", "name": "Tornado of Regret", "element": "Air", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Spinning gust"},
+    {"id": "s9", "name": "Burnt Offering", "element": "Fire", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Fireball"},
+    {"id": "s10", "name": "Butter Melt", "element": "Fire", "damage": null, "cost": null, "baseSpellId": null, "effectNote": "Damage over time"}
+  ],
+  "spawns": [
+    {"id": "area1_spawn_a", "fairy": "f1", "map": null, "position": null},
+    {"id": "area1_spawn_b", "fairy": "f2", "map": null, "position": null},
+    {"id": "area1_spawn_c", "fairy": "f3", "map": null, "position": null},
+    {"id": "area1_spawn_d", "fairy": "f4", "map": null, "position": null},
+    {"id": "area1_spawn_e", "fairy": "f5", "map": null, "position": null}
+  ],
+  "hooks": [
+    {"id": "h1", "target": "wizform table", "file": null, "format": null},
+    {"id": "h2", "target": "spell table", "file": null, "format": null},
+    {"id": "h3", "target": "first-area scene/NPC script", "file": null, "format": null},
+    {"id": "h4", "target": "text/strings (names, descriptions)", "file": null, "format": null}
+  ],
+  "preflight_open_cells": [
+    "fairies[*].wizformId, model",
+    "spells[*].damage, cost, baseSpellId",
+    "spawns[*].map, position",
+    "hooks[*].file, format"
+  ]
+}
